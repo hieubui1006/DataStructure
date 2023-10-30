@@ -17,6 +17,7 @@
 		B29F0F172AECC071004A5311 /* DynamicArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F162AECC071004A5311 /* DynamicArrayTests.swift */; };
 		B29F0F212AECC071004A5311 /* DynamicArrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F202AECC071004A5311 /* DynamicArrayUITests.swift */; };
 		B29F0F232AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */; };
+		B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B29F0F1C2AECC071004A5311 /* DynamicArrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicArrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29F0F202AECC071004A5311 /* DynamicArrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITests.swift; sourceTree = "<group>"; };
 		B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		B29F0EFB2AECC070004A5311 /* DynamicArray */ = {
 			isa = PBXGroup;
 			children = (
+				B2AFC3342AEE3FB4005E789F /* DynamicArray */,
 				B29F0EFC2AECC070004A5311 /* AppDelegate.swift */,
 				B29F0EFE2AECC070004A5311 /* SceneDelegate.swift */,
 				B29F0F002AECC070004A5311 /* ViewController.swift */,
@@ -128,6 +131,14 @@
 				B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */,
 			);
 			path = DynamicArrayUITests;
+			sourceTree = "<group>";
+		};
+		B2AFC3342AEE3FB4005E789F /* DynamicArray */ = {
+			isa = PBXGroup;
+			children = (
+				B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */,
+			);
+			path = DynamicArray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				B29F0F072AECC070004A5311 /* DynamicArray.xcdatamodeld in Sources */,
 				B29F0EFD2AECC070004A5311 /* AppDelegate.swift in Sources */,
 				B29F0EFF2AECC070004A5311 /* SceneDelegate.swift in Sources */,
+				B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
