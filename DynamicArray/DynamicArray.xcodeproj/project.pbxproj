@@ -18,6 +18,7 @@
 		B29F0F212AECC071004A5311 /* DynamicArrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F202AECC071004A5311 /* DynamicArrayUITests.swift */; };
 		B29F0F232AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */; };
 		B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */; };
+		B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B29F0F202AECC071004A5311 /* DynamicArrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITests.swift; sourceTree = "<group>"; };
 		B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
+		B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAndPointer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		B29F0EFB2AECC070004A5311 /* DynamicArray */ = {
 			isa = PBXGroup;
 			children = (
+				B2AFC3372AEF7A2C005E789F /* ArraysAndPointer */,
 				B2AFC3342AEE3FB4005E789F /* DynamicArray */,
 				B29F0EFC2AECC070004A5311 /* AppDelegate.swift */,
 				B29F0EFE2AECC070004A5311 /* SceneDelegate.swift */,
@@ -139,6 +142,14 @@
 				B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */,
 			);
 			path = DynamicArray;
+			sourceTree = "<group>";
+		};
+		B2AFC3372AEF7A2C005E789F /* ArraysAndPointer */ = {
+			isa = PBXGroup;
+			children = (
+				B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */,
+			);
+			path = ArraysAndPointer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 				B29F0F012AECC070004A5311 /* ViewController.swift in Sources */,
 				B29F0F072AECC070004A5311 /* DynamicArray.xcdatamodeld in Sources */,
 				B29F0EFD2AECC070004A5311 /* AppDelegate.swift in Sources */,
+				B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */,
 				B29F0EFF2AECC070004A5311 /* SceneDelegate.swift in Sources */,
 				B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */,
 			);
