@@ -1,6 +1,7 @@
 import UIKit
 
-
+///when you reach capacity, resize to double the size
+///O(1) to add/remove at end (amortized for allocations for more space), index, or update
 class DynamicArray {
     
     static func upsizeArray() {
