@@ -15,11 +15,12 @@ class DynamicArray {
             }
             
             values = arrNew
-            
-            values.removeLast()
+//            let valueIndex = values[2]
+//            values.remove(at: 2)
+//            values.append(valueIndex)
             
             print(arrNew.count)
-            print(values.count)
+            print(values)
         }
     }
 }

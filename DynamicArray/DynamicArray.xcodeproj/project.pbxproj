@@ -19,6 +19,7 @@
 		B29F0F232AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */; };
 		B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */; };
 		B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */; };
+		B2F8CCC62AF0CC5F0034B620 /* ArrayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F8CCC52AF0CC5F0034B620 /* ArrayManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
 		B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAndPointer.swift; sourceTree = "<group>"; };
+		B2F8CCC52AF0CC5F0034B620 /* ArrayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		B29F0EFB2AECC070004A5311 /* DynamicArray */ = {
 			isa = PBXGroup;
 			children = (
+				B2F8CCC42AF0CB270034B620 /* Array */,
 				B2AFC3372AEF7A2C005E789F /* ArraysAndPointer */,
 				B2AFC3342AEE3FB4005E789F /* DynamicArray */,
 				B29F0EFC2AECC070004A5311 /* AppDelegate.swift */,
@@ -150,6 +153,14 @@
 				B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */,
 			);
 			path = ArraysAndPointer;
+			sourceTree = "<group>";
+		};
+		B2F8CCC42AF0CB270034B620 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				B2F8CCC52AF0CC5F0034B620 /* ArrayManager.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +297,7 @@
 				B29F0F012AECC070004A5311 /* ViewController.swift in Sources */,
 				B29F0F072AECC070004A5311 /* DynamicArray.xcdatamodeld in Sources */,
 				B29F0EFD2AECC070004A5311 /* AppDelegate.swift in Sources */,
+				B2F8CCC62AF0CC5F0034B620 /* ArrayManager.swift in Sources */,
 				B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */,
 				B29F0EFF2AECC070004A5311 /* SceneDelegate.swift in Sources */,
 				B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */,
