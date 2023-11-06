@@ -47,7 +47,7 @@ extension ArrayManager {
        - insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right
      */
     func insert(item: Any, at index: Int) {
-        upsizeArray(array)
+        resize(array)
         guard index < array.count else {
             fromVC.present(UIAlertController(title: "Thông báo", message: "Không thể chèn phần tử vào vị trí số \(index)", preferredStyle: .alert), animated: true)
             return
@@ -94,10 +94,21 @@ extension ArrayManager {
         array = arrTemp
     }
     
+    /// -  find(item) - looks for value and returns first index with that value, -1 if not found
+    func find(item: Any) -> Int {
+        for i in 0..<array.count {
+            let data: Any = array[i]
+            if (data as! AnyHashable) == (item as! AnyHashable) {
+                return i
+            }
+        }
+        return -1
+    }
+    
     /// tăng dung lượng bộ nhớ cho mảng
-    func upsizeArray(_ arr: [Any]) {
-        if arr.count == array.capacity {
-            var arrNew = [Any](repeating: 0, count: array.capacity * 2)
+    func resize(_ arr: [Any]) {
+        if arr.count <= array.capacity {
+            var arrNew = [Any](repeating: 0, count: array.count * 2)
             
             for i in 0..<array.count {
                 arrNew[i] = array[i]
