@@ -80,18 +80,21 @@ extension ArrayManager {
     
     /// - remove from end, return value
     func pop() {
-        array.remove(at: array.count - 1)
+        var arrTemp = [Int]()
+        
+        for i in 0..<size {
+            if i != size - 1 {
+                arrTemp.append(array[i])
+            }
+        }
+        array = arrTemp
     }
     
     /// - delete item at index, shifting all trailing elements left
     func delete(index: Int) {
-        guard index < array.count else {
-            fromVC.present(UIAlertController(title: "Thông báo", message: "Không thể xoá vị trí số \(index)", preferredStyle: .alert), animated: true)
-            return
-        }
         var arrTemp = [Int]()
         
-        for i in 0..<array.count {
+        for i in 0..<size {
             if i != index {
                 arrTemp.append(array[i])
             }
@@ -101,7 +104,7 @@ extension ArrayManager {
     
     /// -  find(item) - looks for value and returns first index with that value, -1 if not found
     func find(item: Int) -> Int {
-        for i in 0..<array.count {
+        for i in 0..<size {
             if array[i] == item {
                 return i
             }
