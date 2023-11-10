@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let datas = ArrayManager(list: [1,2,3,4,5], fromVC: self)
-        print("------ SIZE :: \(datas.append(6))")
+        datas.append(6)
+        datas.delete(index: 2)
+        datas.insert(item: 10, at: 2)
+        print("------ ARRAY :: \(datas.getArray())")
         print("------ SIZE :: \(datas.size)")
         print("------ CAPACITY :: \(datas.capacity)")
     }

@@ -11,7 +11,7 @@ class ArrayManager {
         self.fromVC = fromVC
     }
     
-    func getArray() -> [Any] {
+    func getArray() -> [Int] {
         return array
     }
 }
@@ -49,33 +49,35 @@ extension ArrayManager {
     
     /// thêm 1 phần tử vào cuối mảng
     func append(_ item: Int) {
-        return array.append(item)
+        var arrTemp = [Int](repeating: 0, count: size + 1)
+        for i in 0...size {
+            if i == size {
+                arrTemp[i] = item
+            } else {
+                arrTemp[i] = array[i]
+            }
+        }
+        array = arrTemp
     }
     
     /* - Thêm 1 phần tử ở 1 vị trí thoả mãn trong mảng
        - insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right
      */
     func insert(item: Int, at index: Int) {
-        resize()
-        if index == size - 1 {
-            array.append(item)
-        } else {
-            array.append(item)
-            var arrTemp = [Int]()
-            
-            for i in 0..<size {
-                if i < index {
-                    arrTemp.append(array[i])
+        guard index < size else { return }
+        var arrTemp = [Int](repeating: 0, count: size + 1)
+        for i in 0...size {
+            if i < index {
+                arrTemp[i] = array[i]
+            } else {
+                if i == index {
+                    arrTemp[i] = item
                 } else {
-                    if i == index {
-                        arrTemp.append(item)
-                    } else {
-                        arrTemp.append(array[i - 1])
-                    }
+                    arrTemp[i] = array[i - 1]
                 }
             }
-            array = arrTemp
         }
+        array = arrTemp
     }
     
     /// - remove from end, return value
@@ -92,12 +94,12 @@ extension ArrayManager {
     
     /// - delete item at index, shifting all trailing elements left
     func delete(index: Int) {
-        var arrTemp = [Int]()
-        
-        for i in 0..<size {
-            if i != index {
-                arrTemp.append(array[i])
-            }
+        for i in index..<size - 1 {
+            array[i] = array[i + 1]
+        }
+        var arrTemp = [Int](repeating: 0, count: size - 1)
+        for idx in 0..<size - 1 {
+            arrTemp[idx] = array[idx]
         }
         array = arrTemp
     }
