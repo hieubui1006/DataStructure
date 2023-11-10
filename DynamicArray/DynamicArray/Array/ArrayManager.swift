@@ -3,10 +3,10 @@ import UIKit
 
 class ArrayManager {
     
-    fileprivate var array = [Any]()
+    fileprivate var array = [Int]()
     fileprivate var fromVC: UIViewController!
     
-    init(list: [Any], fromVC: UIViewController) {
+    init(list: [Int], fromVC: UIViewController) {
         self.array = list
         self.fromVC = fromVC
     }
@@ -17,48 +17,53 @@ class ArrayManager {
 }
 
 extension ArrayManager {
+    
     /// phần tử trong mảng
     var size: Int {
-        return array.count
+        var idx = 0
+        for _ in array {
+            idx += 1
+        }
+        return idx
     }
     
-    /// max dung lượng của mảng
     var capacity: Int {
-        return array.capacity
+        var value = 1
+        for _ in array {
+            guard value < size else { return value }
+            value = value * 2
+        }
+        return value
     }
     
     /// mảng rỗng
     var isEmpty: Bool {
-        return array.count == 0
+        return size == 0
     }
     
     /// trả về 1 phần tử ở 1 vị trí bất kỳ trong mảng
-    func at(index: Int) -> Any? {
-        guard index < array.count else { return nil }
+    func at(index: Int) -> Int? {
+        guard index < size else { return nil }
         return array[index]
     }
     
     /// thêm 1 phần tử vào cuối mảng
-    func append(_ item: Any) {
+    func append(_ item: Int) {
         return array.append(item)
     }
     
     /* - Thêm 1 phần tử ở 1 vị trí thoả mãn trong mảng
        - insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right
      */
-    func insert(item: Any, at index: Int) {
-        resize(array)
-        guard index < array.count else {
-            fromVC.present(UIAlertController(title: "Thông báo", message: "Không thể chèn phần tử vào vị trí số \(index)", preferredStyle: .alert), animated: true)
-            return
-        }
-        if index == array.count - 1 {
+    func insert(item: Int, at index: Int) {
+        resize()
+        if index == size - 1 {
             array.append(item)
         } else {
             array.append(item)
-            var arrTemp = [Any]()
+            var arrTemp = [Int]()
             
-            for i in 0..<array.count {
+            for i in 0..<size {
                 if i < index {
                     arrTemp.append(array[i])
                 } else {
@@ -84,7 +89,7 @@ extension ArrayManager {
             fromVC.present(UIAlertController(title: "Thông báo", message: "Không thể xoá vị trí số \(index)", preferredStyle: .alert), animated: true)
             return
         }
-        var arrTemp = [Any]()
+        var arrTemp = [Int]()
         
         for i in 0..<array.count {
             if i != index {
@@ -95,10 +100,9 @@ extension ArrayManager {
     }
     
     /// -  find(item) - looks for value and returns first index with that value, -1 if not found
-    func find(item: Any) -> Int {
+    func find(item: Int) -> Int {
         for i in 0..<array.count {
-            let data: Any = array[i]
-            if (data as! AnyHashable) == (item as! AnyHashable) {
+            if array[i] == item {
                 return i
             }
         }
@@ -106,14 +110,11 @@ extension ArrayManager {
     }
     
     /// tăng dung lượng bộ nhớ cho mảng
-    func resize(_ arr: [Any]) {
-        if arr.count <= array.capacity {
-            var arrNew = [Any](repeating: 0, count: array.count * 2)
-            
-            for i in 0..<array.count {
-                arrNew[i] = array[i]
-            }
-            array = arrNew
+    func resize() {
+        var arrNew = [Int](repeating: 0, count: capacity)
+        for i in 0..<size {
+            arrNew[i] = array[i]
         }
+        array = arrNew
     }
 }
