@@ -3,37 +3,21 @@ import UIKit
 
 class ArrayManager {
     
-    fileprivate var array = [Int]()
+    fileprivate var size = 0
     fileprivate var fromVC: UIViewController!
+    fileprivate var array = [Int]()
     
-    init(list: [Int], fromVC: UIViewController) {
-        self.array = list
+    init(size: Int, fromVC: UIViewController) {
+        self.size = size
+        self.array = [Int](repeating: 0, count: size)
         self.fromVC = fromVC
-    }
-    
-    func getArray() -> [Int] {
-        return array
     }
 }
 
 extension ArrayManager {
     
-    /// phần tử trong mảng
-    var size: Int {
-        var idx = 0
-        for _ in array {
-            idx += 1
-        }
-        return idx
-    }
-    
     var capacity: Int {
-        var value = 1
-        for _ in array {
-            guard value < size else { return value }
-            value = value * 2
-        }
-        return value
+        return size
     }
     
     /// mảng rỗng
@@ -49,15 +33,8 @@ extension ArrayManager {
     
     /// thêm 1 phần tử vào cuối mảng
     func append(_ item: Int) {
-        var arrTemp = [Int](repeating: 0, count: size + 1)
-        for i in 0...size {
-            if i == size {
-                arrTemp[i] = item
-            } else {
-                arrTemp[i] = array[i]
-            }
-        }
-        array = arrTemp
+        size += 1
+        array[size - 1] = item
     }
     
     /* - Thêm 1 phần tử ở 1 vị trí thoả mãn trong mảng
@@ -65,31 +42,19 @@ extension ArrayManager {
      */
     func insert(item: Int, at index: Int) {
         guard index < size else { return }
-        var arrTemp = [Int](repeating: 0, count: size + 1)
-        for i in 0...size {
-            if i < index {
-                arrTemp[i] = array[i]
+        resize()
+        for i in index...size {
+            if i == index {
+                array[i] = item
             } else {
-                if i == index {
-                    arrTemp[i] = item
-                } else {
-                    arrTemp[i] = array[i - 1]
-                }
+                array[i] = array[i - 1]
             }
         }
-        array = arrTemp
     }
     
     /// - remove from end, return value
     func pop() {
-        var arrTemp = [Int]()
-        
-        for i in 0..<size {
-            if i != size - 1 {
-                arrTemp.append(array[i])
-            }
-        }
-        array = arrTemp
+        size -= 1
     }
     
     /// - delete item at index, shifting all trailing elements left
@@ -116,10 +81,14 @@ extension ArrayManager {
     
     /// tăng dung lượng bộ nhớ cho mảng
     func resize() {
-        var arrNew = [Int](repeating: 0, count: capacity)
-        for i in 0..<size {
-            arrNew[i] = array[i]
+        if size == capacity {
+            let newSize = 2 << size - 1
+            var arrNew = [Int](repeating: 0, count: newSize)
+            for i in 0..<size {
+                arrNew[i] = array[i]
+            }
+            array = arrNew
+            size = newSize
         }
-        array = arrNew
     }
 }
