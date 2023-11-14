@@ -1,24 +1,19 @@
 import UIKit
 
 
-class ArrayManager {
+class HBArray {
     
     fileprivate var size = 0
-    fileprivate var fromVC: UIViewController!
+    fileprivate var capacity = 2
     fileprivate var array = [Int]()
     
-    init(size: Int, fromVC: UIViewController) {
+    init(size: Int) {
         self.size = size
-        self.array = [Int](repeating: 0, count: size)
-        self.fromVC = fromVC
+        resizeUp()
     }
 }
 
-extension ArrayManager {
-    
-    var capacity: Int {
-        return size
-    }
+extension HBArray {
     
     /// mảng rỗng
     var isEmpty: Bool {
@@ -28,13 +23,14 @@ extension ArrayManager {
     /// trả về 1 phần tử ở 1 vị trí bất kỳ trong mảng
     func at(index: Int) -> Int? {
         guard index < size else { return nil }
-        return array[index]
+        return index
     }
     
     /// thêm 1 phần tử vào cuối mảng
     func append(_ item: Int) {
         size += 1
         array[size - 1] = item
+        resizeUp()
     }
     
     /* - Thêm 1 phần tử ở 1 vị trí thoả mãn trong mảng
@@ -42,19 +38,26 @@ extension ArrayManager {
      */
     func insert(item: Int, at index: Int) {
         guard index < size else { return }
-        resize()
-        for i in index...size {
+        var arrTemp = [Int](repeating: 0, count: size + 1)
+        for i in 0...size {
+            arrTemp[i] = array[i]
             if i == index {
-                array[i] = item
-            } else {
-                array[i] = array[i - 1]
+                arrTemp[i] = item
+            } else
+            if i > index {
+                arrTemp[i] = array[i - 1]
             }
         }
+        array = arrTemp
+        size += 1
+        resizeUp()
     }
     
     /// - remove from end, return value
     func pop() {
         size -= 1
+        array[size - 1] = item
+        resizeDown()
     }
     
     /// - delete item at index, shifting all trailing elements left
@@ -80,15 +83,29 @@ extension ArrayManager {
     }
     
     /// tăng dung lượng bộ nhớ cho mảng
-    func resize() {
-        if size == capacity {
-            let newSize = 2 << size - 1
-            var arrNew = [Int](repeating: 0, count: newSize)
-            for i in 0..<size {
-                arrNew[i] = array[i]
-            }
-            array = arrNew
-            size = newSize
+    /* - can allocate int array under the hood, just not use its features
+     - start with 16, or if starting number is greater, use power of 2 - 16, 32, 64, 128
+     */
+    func resizeUp() {
+        while (capacity <= size) {
+            capacity = 2 * capacity
         }
+        resizeArray()
+    }
+    
+    func resizeDown() {
+        while (capacity > size * 2) {
+            capacity = capacity * 2 / 4
+        }
+        resizeArray()
+    }
+    
+    func resizeArray() {
+        var arrNew = [Int](repeating: .init(), count: self.capacity)
+        for i in 0..<size {
+            arrNew[i] = array[i]
+        }
+        array = arrNew
+        size = capacity
     }
 }
