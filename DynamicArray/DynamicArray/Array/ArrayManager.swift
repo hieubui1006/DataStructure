@@ -3,17 +3,22 @@ import UIKit
 
 class HBArray {
     
-    fileprivate var size = 0
-    fileprivate var capacity = 2
+     var size = 0
+     var capacity = 2
     fileprivate var array = [Int]()
     
     init(size: Int) {
         self.size = size
+        array = [Int](repeating: .init(), count: size)
         resizeUp()
     }
 }
 
 extension HBArray {
+    
+    func getArray() -> [Int] {
+        return array
+    }
     
     /// mảng rỗng
     var isEmpty: Bool {
@@ -23,14 +28,14 @@ extension HBArray {
     /// trả về 1 phần tử ở 1 vị trí bất kỳ trong mảng
     func at(index: Int) -> Int? {
         guard index < size else { return nil }
-        return index
+        return array[index]
     }
     
     /// thêm 1 phần tử vào cuối mảng
     func push(_ item: Int) {
         size += 1
-        array[size - 1] = item
         resizeUp()
+        array[size - 1] = item
     }
     
     /* - Thêm 1 phần tử ở 1 vị trí thoả mãn trong mảng
@@ -61,7 +66,7 @@ extension HBArray {
     
     /// - delete item at index, shifting all trailing elements left
     func delete(index: Int) {
-        for i in index..<size - 1 {
+        for i in index..<size {
             array[i] = array[i + 1]
         }
         size -= 1
@@ -86,22 +91,21 @@ extension HBArray {
         while (capacity <= size) {
             capacity = 2 * capacity
         }
-        resizeArray()
+        resizeArray(size - 1)
     }
     
     func resizeDown() {
         while (capacity > size * 2) {
             capacity = capacity * 2 / 4
         }
-        resizeArray()
+        resizeArray(size)
     }
     
-    func resizeArray() {
+    func resizeArray(_ size: Int) {
         var arrNew = [Int](repeating: .init(), count: self.capacity)
         for i in 0..<size {
             arrNew[i] = array[i]
         }
         array = arrNew
-        size = capacity
     }
 }
