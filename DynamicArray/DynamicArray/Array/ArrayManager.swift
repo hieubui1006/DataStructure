@@ -27,7 +27,7 @@ extension HBArray {
     }
     
     /// thêm 1 phần tử vào cuối mảng
-    func append(_ item: Int) {
+    func push(_ item: Int) {
         size += 1
         array[size - 1] = item
         resizeUp()
@@ -56,7 +56,6 @@ extension HBArray {
     /// - remove from end, return value
     func pop() {
         size -= 1
-        array[size - 1] = item
         resizeDown()
     }
     
@@ -65,11 +64,8 @@ extension HBArray {
         for i in index..<size - 1 {
             array[i] = array[i + 1]
         }
-        var arrTemp = [Int](repeating: 0, count: size - 1)
-        for idx in 0..<size - 1 {
-            arrTemp[idx] = array[idx]
-        }
-        array = arrTemp
+        size -= 1
+        resizeDown()
     }
     
     /// -  find(item) - looks for value and returns first index with that value, -1 if not found
