@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EA8D7A09-6934-4480-84F4-7CA768AF70CE"
+            uuid = "788DB79F-6CA3-4801-B009-7353A1C5705F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DynamicArray/Array/ArrayManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "resizeArray()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "delete(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
