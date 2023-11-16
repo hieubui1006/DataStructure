@@ -91,17 +91,17 @@ extension HBArray {
         while (capacity <= size) {
             capacity = 2 * capacity
         }
-        resizeArray(size - 1)
+        resizeArray()
     }
     
     func resizeDown() {
         while (capacity > size * 2) {
             capacity = capacity * 2 / 4
         }
-        resizeArray(size)
+        resizeArray()
     }
     
-    func resizeArray(_ size: Int) {
+    func resizeArray() {
         var arrNew = [Int](repeating: .init(), count: self.capacity)
         for i in 0..<size {
             arrNew[i] = array[i]

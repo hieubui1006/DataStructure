@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         let datas = HBArray(size: 5)
         datas.push(6)
         datas.delete(index: 2)
+        datas.insert(item: 10, at: 3)
         print("------ ARRAY :: \(datas.getArray())")
         print("------ SIZE :: \(datas.size)")
         print("------ CAPACITY :: \(datas.capacity)")
