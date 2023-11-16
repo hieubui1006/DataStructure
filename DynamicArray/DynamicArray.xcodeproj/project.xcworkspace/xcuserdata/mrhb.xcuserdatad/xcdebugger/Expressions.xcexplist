@@ -18,5 +18,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "HBArray.delete(index:):ArrayManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "array">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

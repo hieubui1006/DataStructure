@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let datas = HBArray(size: 3)
-        datas.push(10)
-        datas.insert(item: 10, at: 2)
-        datas.delete(index: 1)
+        let datas = HBArray(size: 4)
+//        datas.push(10)
+        datas.insert(item: 10, at: 1)
         print("------ ARRAY BE:: \(datas.getArray())")
-        datas.remove(item: 10)
+        datas.delete(index: 1)
+
+//        datas.remove(item: 10)
         print("------ ARRAY AF:: \(datas.getArray())")
         print("------ SIZE :: \(datas.size)")
         print("------ CAPACITY :: \(datas.capacity)")

@@ -9,7 +9,7 @@ class HBArray {
     
     init(size: Int) {
         self.size = size
-        array = [Int](repeating: .init(), count: size)
+        array = [1,2,3,4]
         resizeUp()
     }
 }
@@ -64,7 +64,7 @@ extension HBArray {
     
     /// - delete item at index, shifting all trailing elements left
     func delete(index: Int) {
-        for i in index..<size {
+        for i in index..<size - 1 {
             array[i] = array[i + 1]
         }
         size -= 1
