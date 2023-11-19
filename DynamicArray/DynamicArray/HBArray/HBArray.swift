@@ -9,7 +9,7 @@ class HBArray {
     
     init(size: Int) {
         self.size = size
-        array = [1,2,3,4]
+        array = [Int](repeating: .init(), count: size)
         resizeUp()
     }
 }
@@ -97,7 +97,6 @@ extension HBArray {
     /* - can allocate int array under the hood, just not use its features
      - start with 16, or if starting number is greater, use power of 2 - 16, 32, 64, 128
      */
-    private
     func resizeUp() {
         while (capacity <= size) {
             capacity = 2 * capacity
@@ -105,7 +104,6 @@ extension HBArray {
         resizeArray()
     }
     
-    private
     func resizeDown() {
         while (capacity > size * 2) {
             capacity = capacity * 2 / 4

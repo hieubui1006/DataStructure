@@ -19,7 +19,8 @@
 		B29F0F232AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */; };
 		B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */; };
 		B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */; };
-		B2F8CCC62AF0CC5F0034B620 /* ArrayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F8CCC52AF0CC5F0034B620 /* ArrayManager.swift */; };
+		B2D2578D2B09E6110072F4DE /* HBArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */; };
+		B2F8CCC62AF0CC5F0034B620 /* HBArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F8CCC52AF0CC5F0034B620 /* HBArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,8 @@
 		B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
 		B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAndPointer.swift; sourceTree = "<group>"; };
-		B2F8CCC52AF0CC5F0034B620 /* ArrayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayManager.swift; sourceTree = "<group>"; };
+		B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBArrayTest.swift; sourceTree = "<group>"; };
+		B2F8CCC52AF0CC5F0034B620 /* HBArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B29F0EFB2AECC070004A5311 /* DynamicArray */,
+				B2D2578A2B09E5700072F4DE /* SequenceTests */,
 				B29F0F152AECC071004A5311 /* DynamicArrayTests */,
 				B29F0F1F2AECC071004A5311 /* DynamicArrayUITests */,
 				B29F0EFA2AECC070004A5311 /* Products */,
@@ -107,7 +110,7 @@
 		B29F0EFB2AECC070004A5311 /* DynamicArray */ = {
 			isa = PBXGroup;
 			children = (
-				B2F8CCC42AF0CB270034B620 /* Array */,
+				B2F8CCC42AF0CB270034B620 /* HBArray */,
 				B2AFC3372AEF7A2C005E789F /* ArraysAndPointer */,
 				B2AFC3342AEE3FB4005E789F /* DynamicArray */,
 				B29F0EFC2AECC070004A5311 /* AppDelegate.swift */,
@@ -155,12 +158,20 @@
 			path = ArraysAndPointer;
 			sourceTree = "<group>";
 		};
-		B2F8CCC42AF0CB270034B620 /* Array */ = {
+		B2D2578A2B09E5700072F4DE /* SequenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				B2F8CCC52AF0CC5F0034B620 /* ArrayManager.swift */,
+				B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */,
 			);
-			path = Array;
+			path = SequenceTests;
+			sourceTree = "<group>";
+		};
+		B2F8CCC42AF0CB270034B620 /* HBArray */ = {
+			isa = PBXGroup;
+			children = (
+				B2F8CCC52AF0CC5F0034B620 /* HBArray.swift */,
+			);
+			path = HBArray;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +308,7 @@
 				B29F0F012AECC070004A5311 /* ViewController.swift in Sources */,
 				B29F0F072AECC070004A5311 /* DynamicArray.xcdatamodeld in Sources */,
 				B29F0EFD2AECC070004A5311 /* AppDelegate.swift in Sources */,
-				B2F8CCC62AF0CC5F0034B620 /* ArrayManager.swift in Sources */,
+				B2F8CCC62AF0CC5F0034B620 /* HBArray.swift in Sources */,
 				B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */,
 				B29F0EFF2AECC070004A5311 /* SceneDelegate.swift in Sources */,
 				B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */,
@@ -309,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29F0F172AECC071004A5311 /* DynamicArrayTests.swift in Sources */,
+				B2D2578D2B09E6110072F4DE /* HBArrayTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
