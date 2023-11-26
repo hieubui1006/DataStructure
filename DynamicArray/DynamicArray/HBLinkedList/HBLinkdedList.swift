@@ -79,4 +79,21 @@ extension HBLinkdedList {
         tail?.next = nil
         return tail?.value
     }
+    
+    func front() -> T? {
+        return head?.value
+    }
+    
+    func  back() -> T? {
+        /// giá trị O(n)
+        var p = head
+        while p?.next?.next != nil {
+            p = p?.next
+        }
+        return p?.value
+        
+        /// giá trị O(1)
+        return tail?.value
+    }
+
 }
