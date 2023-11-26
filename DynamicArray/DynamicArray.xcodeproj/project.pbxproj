@@ -17,6 +17,7 @@
 		B29F0F172AECC071004A5311 /* DynamicArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F162AECC071004A5311 /* DynamicArrayTests.swift */; };
 		B29F0F212AECC071004A5311 /* DynamicArrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F202AECC071004A5311 /* DynamicArrayUITests.swift */; };
 		B29F0F232AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */; };
+		B2A521142B11DFD300344AAF /* HBLinkdedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A521132B11DFD300344AAF /* HBLinkdedList.swift */; };
 		B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */; };
 		B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */; };
 		B2D2578D2B09E6110072F4DE /* HBArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */; };
@@ -55,6 +56,7 @@
 		B29F0F1C2AECC071004A5311 /* DynamicArrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicArrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29F0F202AECC071004A5311 /* DynamicArrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITests.swift; sourceTree = "<group>"; };
 		B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArrayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B2A521132B11DFD300344AAF /* HBLinkdedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBLinkdedList.swift; sourceTree = "<group>"; };
 		B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
 		B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAndPointer.swift; sourceTree = "<group>"; };
 		B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBArrayTest.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		B29F0EFB2AECC070004A5311 /* DynamicArray */ = {
 			isa = PBXGroup;
 			children = (
+				B2A521122B11DF5E00344AAF /* HBLinkedList */,
 				B2F8CCC42AF0CB270034B620 /* HBArray */,
 				B2AFC3372AEF7A2C005E789F /* ArraysAndPointer */,
 				B2AFC3342AEE3FB4005E789F /* DynamicArray */,
@@ -140,6 +143,14 @@
 				B29F0F222AECC071004A5311 /* DynamicArrayUITestsLaunchTests.swift */,
 			);
 			path = DynamicArrayUITests;
+			sourceTree = "<group>";
+		};
+		B2A521122B11DF5E00344AAF /* HBLinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				B2A521132B11DFD300344AAF /* HBLinkdedList.swift */,
+			);
+			path = HBLinkedList;
 			sourceTree = "<group>";
 		};
 		B2AFC3342AEE3FB4005E789F /* DynamicArray */ = {
@@ -312,6 +323,7 @@
 				B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */,
 				B29F0EFF2AECC070004A5311 /* SceneDelegate.swift in Sources */,
 				B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */,
+				B2A521142B11DFD300344AAF /* HBLinkdedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
