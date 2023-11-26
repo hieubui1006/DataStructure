@@ -70,5 +70,13 @@ extension HBLinkdedList {
         }
     }
     
-    
+    mutating func pop_back() -> T? {
+        var p = head
+        while p?.next?.next != nil {
+            p = p?.next
+        }
+        tail = p
+        tail?.next = nil
+        return tail?.value
+    }
 }

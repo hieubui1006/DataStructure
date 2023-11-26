@@ -33,8 +33,9 @@ class ViewController: UIViewController {
         linkdedList.push_front(item: 2)
         linkdedList.push_front(item: 3)
         linkdedList.push_back(item: 5)
+        linkdedList.pop_back()
         
-        print("------ VALUE :: \(linkdedList.value_at(index: 2))")
+        print("------ VALUE :: \(linkdedList.value_at(index: 1))")
         print("------ HEAD :: \(linkdedList.head?.value)")
         print("------ TAIL :: \(linkdedList.tail?.value)")
     }
