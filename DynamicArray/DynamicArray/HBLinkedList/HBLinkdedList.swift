@@ -22,7 +22,11 @@ struct HBLinkdedList<T> {
     
     var head: Node<T>? {
         didSet {
-            self.tail = head?.next
+            if tail == nil {
+                self.tail = head
+            } else {
+                self.tail = head?.next
+            }
             self.tail?.next = nil
         }
     }
@@ -33,6 +37,17 @@ struct HBLinkdedList<T> {
 }
 
 extension HBLinkdedList {
+    
+    func size() -> Int {
+        var size = 0
+        var p = head
+        while p?.next != nil {
+            p = p?.next
+            size += 1
+        }
+        return size + 1
+    }
+    
     func isEmpty() -> Bool {
         return head == nil
     }
@@ -95,5 +110,28 @@ extension HBLinkdedList {
         /// giá trị O(1)
         return tail?.value
     }
-
+    
+    mutating func insert(index: Int, item: T) {
+        guard index <= size() else { return }
+        if index == 0 {
+            push_front(item: item)
+            return
+        }
+        if index == size() {
+            push_back(item: item)
+            return
+        }
+        
+        var idx = 1
+        var p = head
+        while p?.next != nil {
+            if idx == index {
+                let node = Node(value: item, next: p?.next)
+                p?.next = node
+                break
+            }
+            p = p?.next
+            idx += 1
+        }
+    }
 }

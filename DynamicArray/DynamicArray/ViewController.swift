@@ -30,10 +30,11 @@ class ViewController: UIViewController {
     
     func linkdedListTest() {
         var linkdedList = HBLinkdedList<Int>()
-        linkdedList.push_front(item: 2)
-        linkdedList.push_front(item: 3)
-        linkdedList.push_back(item: 5)
-        linkdedList.pop_back()
+        linkdedList.push_front(item: 1)
+        linkdedList.push_back(item: 2)
+        linkdedList.push_back(item: 3)
+        linkdedList.push_back(item: 4)
+        linkdedList.insert(index: 4, item: 10)
         
         print("------ VALUE :: \(linkdedList.value_at(index: 1))")
         print("------ HEAD :: \(linkdedList.head?.value)")
