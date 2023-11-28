@@ -134,4 +134,31 @@ extension HBLinkdedList {
             idx += 1
         }
     }
+    
+    mutating func erase(index: Int) {
+        guard index < size() else { return }
+        if index == 0 {
+            _ = pop_front()
+            return
+        }
+        if index == size() - 1 {
+            _ = pop_back()
+            return
+        }
+        
+        var idx = 1
+        var p = head
+        while p?.next != nil {
+            if idx == index {
+                guard let value = p?.next?.value else { return }
+                let node = Node(value: value, next: p?.next)
+                p?.next = node.next?.next
+                break
+            }
+            p = p?.next
+            idx += 1
+        }
+        print("========== \(p.debugDescription)")
+    }
+    
 }
