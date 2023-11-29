@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        array()
-        linkdedListTest()
+//        linkdedListTest()
+        doublyLinkedList()
     }
     
     func array() {
@@ -34,12 +35,22 @@ class ViewController: UIViewController {
         linkdedList.push_back(item: 2)
         linkdedList.push_back(item: 3)
         linkdedList.push_back(item: 4)
-        linkdedList.insert(index: 2, item: 8)
-        linkdedList.erase(index: 3)
+//        linkdedList.insert(index: 2, item: 8)
+//        linkdedList.erase(index: 3)
         
         print("------ VALUE :: \(linkdedList.value_at(index: 3))")
         print("------ HEAD :: \(linkdedList.head?.value)")
         print("------ TAIL :: \(linkdedList.tail?.value)")
+    }
+    
+    func doublyLinkedList() {
+        var list = HBDoublyLinkedList<Int>()
+        list.push_back(item: 1)
+        list.push_back(item: 2)
+        list.push_back(item: 3)
+        list.push_back(item: 4)
+        list.reverse()
+        print(" ======VALUE :: \(list.value_n_from_end(index: 2))")
     }
 }
 

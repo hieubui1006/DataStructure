@@ -11,13 +11,81 @@ class Node<T> {
     
     var value: T
     var next: Node<T>?
+    var prev: Node<T>?
     
-    init(value: T, next: Node<T>? = nil) {
+    init(value: T, next: Node<T>? = nil, prev: Node<T>? = nil) {
         self.value = value
         self.next = next
+        self.prev = prev
     }
 }
 
+// ========== Doubly Linked List ===========
+struct HBDoublyLinkedList<T> {
+    
+    var head: Node<T>?
+    var tail: Node<T>?
+    var size = 0
+    
+    init() {
+        head = nil
+        tail = head
+    }
+    
+    mutating func push_back(item: T) {
+        let node = Node(value: item)
+        
+        if tail == nil {
+            tail = node
+            head = tail
+            node.prev = nil
+        } else {
+            tail?.next = node
+            node.prev = tail
+            tail = node
+        }
+        size += 1
+    }
+    
+    func value_n_from_end(index: Int) -> T? {
+        guard index < size else { return nil }
+        
+        var idx = size - 1
+        var p = tail
+        while idx != index {
+            p = p?.prev
+            idx -= 1
+        }
+        return p?.value
+    }
+    
+//    mutating func reverse() {
+//        var idx = 0
+//        while idx < size {
+//            guard let value = tail?.value else {
+//                return
+//                
+//            }
+//            var node = Node(value: value, next: tail?.prev)
+//            head = node
+//            tail = tail?.prev
+//            idx += 1
+//        }
+////
+////        while head?.next < size {
+////            tailTemp?.next = head
+////            head?.prev = tailTemp
+////            tailTemp = head
+//////            head?.prev = nil
+////
+////            idx += 1
+////        }
+//        print("abc")
+//    }
+}
+
+
+// ========== Singly Linked List ===========
 struct HBLinkdedList<T> {
     
     var head: Node<T>? {
@@ -31,22 +99,13 @@ struct HBLinkdedList<T> {
         }
     }
     var tail: Node<T>?
-    
+    var size: Int = 0
+
     init() { }
     
 }
 
 extension HBLinkdedList {
-    
-    func size() -> Int {
-        var size = 0
-        var p = head
-        while p?.next != nil {
-            p = p?.next
-            size += 1
-        }
-        return size + 1
-    }
     
     func isEmpty() -> Bool {
         return head == nil
@@ -66,10 +125,12 @@ extension HBLinkdedList {
     mutating func push_front(item: T) {
         let node = Node(value: item, next: head)
         head = node
+        size += 1
     }
     
     mutating func pop_front() -> T? {
         head = head?.next
+        size -= 1
         return head?.value
     }
     
@@ -83,6 +144,7 @@ extension HBLinkdedList {
             tail?.next = node
             tail = node
         }
+        size += 1
     }
     
     mutating func pop_back() -> T? {
@@ -92,6 +154,7 @@ extension HBLinkdedList {
         }
         tail = p
         tail?.next = nil
+        size -= 1
         return tail?.value
     }
     
@@ -112,12 +175,12 @@ extension HBLinkdedList {
     }
     
     mutating func insert(index: Int, item: T) {
-        guard index <= size() else { return }
+        guard index <= size else { return }
         if index == 0 {
             push_front(item: item)
             return
         }
-        if index == size() {
+        if index == size {
             push_back(item: item)
             return
         }
@@ -133,15 +196,16 @@ extension HBLinkdedList {
             p = p?.next
             idx += 1
         }
+        size += 1
     }
     
     mutating func erase(index: Int) {
-        guard index < size() else { return }
+        guard index < size else { return }
         if index == 0 {
             _ = pop_front()
             return
         }
-        if index == size() - 1 {
+        if index == size - 1 {
             _ = pop_back()
             return
         }
@@ -158,7 +222,7 @@ extension HBLinkdedList {
             p = p?.next
             idx += 1
         }
+        size -= 1
         print("========== \(p.debugDescription)")
     }
-    
 }
