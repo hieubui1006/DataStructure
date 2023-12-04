@@ -59,29 +59,21 @@ struct HBDoublyLinkedList<T> {
         return p?.value
     }
     
-//    mutating func reverse() {
-//        var idx = 0
-//        while idx < size {
-//            guard let value = tail?.value else {
-//                return
-//                
-//            }
-//            var node = Node(value: value, next: tail?.prev)
-//            head = node
-//            tail = tail?.prev
-//            idx += 1
-//        }
-////
-////        while head?.next < size {
-////            tailTemp?.next = head
-////            head?.prev = tailTemp
-////            tailTemp = head
-//////            head?.prev = nil
-////
-////            idx += 1
-////        }
-//        print("abc")
-//    }
+    mutating func reverse() {
+        var prev = head
+        var current = head?.next
+        prev?.next = nil
+        
+        while current != nil {
+          let next = current?.next
+          current?.next = prev
+          prev = current
+          current = next
+        }
+        
+        head = prev
+        
+    }
 }
 
 

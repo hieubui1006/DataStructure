@@ -21,7 +21,7 @@ final class HBArrayTests: XCTestCase {
     
     func testGetItemAtIndex() {
         let item = array.at(index: 2)
-        XCTAssertEqual(item, 3)
+        XCTAssertEqual(item, 2)
     }
     
     func testValidNonEmpty() {

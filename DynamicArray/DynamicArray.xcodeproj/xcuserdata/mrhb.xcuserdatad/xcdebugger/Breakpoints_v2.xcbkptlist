@@ -86,85 +86,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7CBA1464-9B7C-4474-9E82-67E98229E6BD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DynamicArray/HBLinkedList/HBLinkdedList.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "reverse()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7CBA1464-9B7C-4474-9E82-67E98229E6BD - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "848">
-               </Location>
-               <Location
-                  uuid = "7CBA1464-9B7C-4474-9E82-67E98229E6BD - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "880">
-               </Location>
-               <Location
-                  uuid = "7CBA1464-9B7C-4474-9E82-67E98229E6BD - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "864">
-               </Location>
-               <Location
-                  uuid = "7CBA1464-9B7C-4474-9E82-67E98229E6BD - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "832">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7BFA9B72-B449-4B28-9646-6DED2806DF80"
+            uuid = "BEBBCEAB-74BE-49FF-976B-48C3BED47F3C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -177,7 +99,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7BFA9B72-B449-4B28-9646-6DED2806DF80 - 843cc1d49f45b362"
+                  uuid = "BEBBCEAB-74BE-49FF-976B-48C3BED47F3C - 843cc1d49f45bcc5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -187,12 +109,12 @@
                   urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "848">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "584">
                </Location>
                <Location
-                  uuid = "7BFA9B72-B449-4B28-9646-6DED2806DF80 - 843cc1d49f45b3cd"
+                  uuid = "BEBBCEAB-74BE-49FF-976B-48C3BED47F3C - 843cc1d49f45bc24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -202,132 +124,9 @@
                   urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "848">
-               </Location>
-               <Location
-                  uuid = "7BFA9B72-B449-4B28-9646-6DED2806DF80 - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "880">
-               </Location>
-               <Location
-                  uuid = "7BFA9B72-B449-4B28-9646-6DED2806DF80 - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "864">
-               </Location>
-               <Location
-                  uuid = "7BFA9B72-B449-4B28-9646-6DED2806DF80 - 843cc1d49f45b3cd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "832">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "64961318-72DF-4036-A7B6-C7EB6A4F26E1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DynamicArray/HBLinkedList/HBLinkdedList.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "reverse()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "64961318-72DF-4036-A7B6-C7EB6A4F26E1 - 843cc1d49f45bc59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "608">
-               </Location>
-               <Location
-                  uuid = "64961318-72DF-4036-A7B6-C7EB6A4F26E1 - 843cc1d49f45bc59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "640">
-               </Location>
-               <Location
-                  uuid = "64961318-72DF-4036-A7B6-C7EB6A4F26E1 - 843cc1d49f45bc59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  uuid = "64961318-72DF-4036-A7B6-C7EB6A4F26E1 - 843cc1d49f45bc59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DynamicArray.HBDoublyLinkedList.reverse() -&gt; ()"
-                  moduleName = "DynamicArray"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mrhb/Documents/GitHub/DataStructure/DynamicArray/DynamicArray/HBLinkedList/HBLinkdedList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "580">
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "556">
                </Location>
             </Locations>
          </BreakpointContent>
