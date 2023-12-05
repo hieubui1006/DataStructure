@@ -58,38 +58,13 @@ struct HBDoublyLinkedList<T> {
         }
         return p?.value
     }
-    
-    mutating func reverse() {
-        var prev = head
-        var current = head?.next
-        prev?.next = nil
-        
-        while current != nil {
-          let next = current?.next
-          current?.next = prev
-          prev = current
-          current = next
-        }
-        
-        head = prev
-        
-    }
 }
 
 
 // ========== Singly Linked List ===========
 struct HBLinkdedList<T> {
     
-    var head: Node<T>? {
-        didSet {
-            if tail == nil {
-                self.tail = head
-            } else {
-                self.tail = head?.next
-            }
-            self.tail?.next = nil
-        }
-    }
+    var head: Node<T>?
     var tail: Node<T>?
     var size: Int = 0
 
@@ -117,13 +92,20 @@ extension HBLinkdedList {
     mutating func push_front(item: T) {
         let node = Node(value: item, next: head)
         head = node
+        var p = head
+        while p?.next != nil {
+            p = p?.next
+        }
+        tail = p
         size += 1
     }
     
     mutating func pop_front() -> T? {
-        head = head?.next
+        var p = head
+        p = p?.next
+        head = p
         size -= 1
-        return head?.value
+        return p?.value
     }
     
     mutating func push_back(item: T) {
@@ -216,5 +198,49 @@ extension HBLinkdedList {
         }
         size -= 1
         print("========== \(p.debugDescription)")
+    }
+    
+    mutating func remove_value(item: T) {
+        /// Hiện tại mới làm được với giá trị kiểu Int và chưa làm đc với giá trị kiểu T
+        if head?.value as! Int == item as! Int { /// xoá phần tử đàu tiên
+            _ = pop_front()
+            return
+        }
+        
+        var idx = 1
+        var p = head
+        while p?.next != nil {
+            if p?.value as! Int == item as! Int {
+                guard let value = p?.next?.value else { return }
+                p?.value = value
+                p?.next = p?.next?.next
+                break
+            }
+            p = p?.next
+            idx += 1
+        }
+        /// xoá phần tử cuối cùng
+        if p?.next == nil && p?.value as! Int == item as! Int {
+            _ = pop_back()
+            return
+        }
+        
+        size -= 1
+        print("========== \(p.debugDescription)")
+    }
+    
+    mutating func reverse() {
+        var prev = head
+        var current = head?.next
+        prev?.next = nil
+        
+        while current != nil {
+          let next = current?.next
+          current?.next = prev
+          prev = current
+          current = next
+        }
+        
+        head = prev
     }
 }
