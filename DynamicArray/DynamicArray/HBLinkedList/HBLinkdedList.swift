@@ -139,7 +139,7 @@ extension HBLinkdedList {
     func  back() -> T? {
         /// giá trị O(n)
         var p = head
-        while p?.next?.next != nil {
+        while p?.next != nil {
             p = p?.next
         }
         return p?.value

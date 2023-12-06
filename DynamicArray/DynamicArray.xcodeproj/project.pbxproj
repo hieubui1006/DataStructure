@@ -20,6 +20,7 @@
 		B2A521142B11DFD300344AAF /* HBLinkdedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A521132B11DFD300344AAF /* HBLinkdedList.swift */; };
 		B2AFC3362AEE3FCE005E789F /* DynamicArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */; };
 		B2AFC3392AEF7A41005E789F /* ArrayAndPointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */; };
+		B2C53F9B2B20C1E800EB24DF /* HBLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C53F9A2B20C1E800EB24DF /* HBLinkedListTest.swift */; };
 		B2D2578D2B09E6110072F4DE /* HBArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */; };
 		B2F8CCC62AF0CC5F0034B620 /* HBArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F8CCC52AF0CC5F0034B620 /* HBArray.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		B2A521132B11DFD300344AAF /* HBLinkdedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBLinkdedList.swift; sourceTree = "<group>"; };
 		B2AFC3352AEE3FCE005E789F /* DynamicArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicArray.swift; sourceTree = "<group>"; };
 		B2AFC3382AEF7A41005E789F /* ArrayAndPointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAndPointer.swift; sourceTree = "<group>"; };
+		B2C53F9A2B20C1E800EB24DF /* HBLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBLinkedListTest.swift; sourceTree = "<group>"; };
 		B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBArrayTest.swift; sourceTree = "<group>"; };
 		B2F8CCC52AF0CC5F0034B620 /* HBArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				B2D2578B2B09E5A00072F4DE /* HBArrayTest.swift */,
+				B2C53F9A2B20C1E800EB24DF /* HBLinkedListTest.swift */,
 			);
 			path = SequenceTests;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29F0F172AECC071004A5311 /* DynamicArrayTests.swift in Sources */,
+				B2C53F9B2B20C1E800EB24DF /* HBLinkedListTest.swift in Sources */,
 				B2D2578D2B09E6110072F4DE /* HBArrayTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
